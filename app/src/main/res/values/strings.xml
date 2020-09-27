@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">UrbanDictionary</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="likes">Likes</string>
+    <string name="dislikes">dislikes</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="sharedPrefFile">com.example.urbandictionary.sharedPref</string>
+    <string name="savedText">savedText</string>
+</resources>

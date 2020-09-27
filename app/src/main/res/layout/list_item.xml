@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="itemWord"
+            type="com.example.urbandictionary.domain.Word" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/wordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/nunito_semibold"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/cardWordText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:wordName="@{itemWord}"
+                tools:text="Infinity" />
+
+            <TextView
+                android:id="@+id/definitionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunito_light"
+                android:justificationMode="inter_word"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wordText"
+                app:wordDefinition="@{itemWord}"
+                tools:ignore="UnusedAttribute"
+                tools:text="1a : the quality of being infinite. b : unlimited extent of time, space, or quantity : boundlessness. 2 : an indefinitely great number or amount an infinity of stars. 3a : the limit of the value of a function
+            or variable when it tends to become numerically larger than any preassigned finite number." />
+
+            <ImageView
+                android:id="@+id/likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/likes"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_thumb_up_24"
+                app:layout_constraintStart_toStartOf="@id/definitionText"
+                app:layout_constraintTop_toBottomOf="@id/definitionText" />
+
+            <TextView
+                android:id="@+id/no_of_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_light"
+                android:gravity="center"
+                android:padding="8dp"
+                app:layout_constraintStart_toEndOf="@id/likes"
+                app:layout_constraintTop_toBottomOf="@id/definitionText"
+                app:wordThumbsUp="@{itemWord}"
+                tools:text="5455" />
+
+            <ImageView
+                android:id="@+id/dislikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/dislikes"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_thumb_down_24"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/definitionText" />
+
+            <TextView
+                android:id="@+id/no_of_dislikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_light"
+                android:gravity="center"
+                android:padding="8dp"
+                app:layout_constraintRight_toLeftOf="@id/dislikes"
+                app:layout_constraintTop_toBottomOf="@id/definitionText"
+                app:wordThumbsDown="@{itemWord}"
+                tools:text="3476" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

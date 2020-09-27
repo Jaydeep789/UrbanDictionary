@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/cabin</item>
+        <item>@font/cabin_semibold</item>
+        <item>@font/cabin_semibold_italic</item>
+        <item>@font/nunito_light</item>
+        <item>@font/nunito_light_italic</item>
+        <item>@font/nunito_semibold</item>
+    </array>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:key="likes"
+        android:summary="Sorts the list based on likes"
+        android:summaryOn="Sorting the list on likes"
+        android:title="Sort by ThumbsUp" />
+
+    <SwitchPreference
+        android:key="dislikes"
+        android:summary="Sorts the list based on dislikes"
+        android:summaryOn="Sorting the list on dislikes"
+        android:title="Sort by ThumbsDown" />
+
+</PreferenceScreen>
