@@ -7,8 +7,7 @@ import com.example.urbandictionary.repository.WordRepository
 import kotlinx.coroutines.*
 
 class WordViewModel @ViewModelInject constructor(
-    private val repository: WordRepository,
-    @Assisted private val savedStateHandle: SavedStateHandle
+    private val repository: WordRepository
 ) : ViewModel() {
 
     val wordList = repository.searchResult
